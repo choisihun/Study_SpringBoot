@@ -1,10 +1,10 @@
-package kr.dgswhs.ex;
+package org.zerock.guestbook;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ExApplicationTests {
+class GuestbookApplicationTests {
 
 	@Test
 	void contextLoads() {
