@@ -9,7 +9,6 @@ import org.zerock.guestbook.sample.service.HotelService;
 
 @SpringBootTest
 class HotelServiceTests {
-
     @Qualifier("hotelServiceImplV2")
     @Autowired
     private HotelService hotelService;
