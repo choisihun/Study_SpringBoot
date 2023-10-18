@@ -111,4 +111,29 @@ class MemoRepositoryTests {
      });
     }
 
+    @Test
+    void testQueryMethod2() {
+        Long mno = 50L;
+        Optional<MemoEntity> result = memoRepository.findByMno(mno);
+        if (result.isPresent()) {
+            System.out.println(result.get());
+        }
+    }
+
+    @Test
+    void testQueryMethod3() {
+        memoRepository.updateMemoText(2L, "UPDATE...");
+    }
+
+    @Test
+    void testQueryMethod4() {
+        Long mno = 0L;
+        Pageable pageable = PageRequest.of(0, 10);
+        Page<MemoEntity> result = memoRepository.getListWithQuery(mno, pageable);
+        result.get().forEach(memoEntity -> {
+            System.out.println(memoEntity);
+        });
+    }
+
+
 }

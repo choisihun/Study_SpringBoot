@@ -18,5 +18,4 @@ public class MemoEntity {
     private Long mno;
     @Column(name = "memo_text", nullable = false, length = 200)
     private String memoText;
-
 }
